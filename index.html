@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Web Layout</title>
+  <style>
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.header .logo {
+  font-size: 44px;
+  font-weight: bold;
+}
+
+.nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.main-article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.main-article img {
+  width: 100%;
+}
+
+.main-article-text h1 {
+  font-size: 24px;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #ff4500;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.new-section {
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+}
+
+.new-section h2 {
+  font-size: 20px;
+  color: #f1c40f;
+}
+
+.new-section ul {
+  list-style: none;
+}
+
+.new-section li {
+  margin-bottom: 20px;
+}
+
+.new-section a {
+  color: #fff;
+  font-weight: bold;
+}
+
+.featured-articles {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.featured-articles article {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+}
+
+.featured-articles article img {
+  width: 100%;
+}
+
+.featured-articles h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.featured-articles p {
+  font-size: 14px;
+  color: #666;
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .nav {
+    margin-top: 10px;
+  }
+
+  .main {
+    grid-template-columns: 1fr;
+  }
+
+  .main-article {
+    grid-template-columns: 1fr;
+  }
+
+  .new-section {
+    margin-top: 20px;
+  }
+
+  .featured-articles {
+    flex-direction: column;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">W.</div>
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#">New</a>
+      <a href="#">Popular</a>
+      <a href="#">Trending</a>
+      <a href="#">Categories</a>
+    </nav>
+  </header>
+  
+  <main class="main">
+    <section class="main-article">
+      <img src="C:\Users\Parasat\Desktop\CLSWRC\assets\images\image-web-3-mobile.jpg" alt="Main article image">
+      <div class="main-article-text">
+        <h1>The Bright Future of Web 3.0?</h1>
+        <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+    </section>
+
+    <aside class="new-section">
+      <h2>New</h2>
+      <ul>
+        <li><a href="#">Hydrogen VS Electric Cars</a><p>Will hydrogen-fueled cars ever catch up to EVs?</p></li>
+        <li><a href="#">The Downsides of AI Artistry</a><p>What are the possible adverse effects of on-demand AI image generation?</p></li>
+        <li><a href="#">Is VC Funding Drying Up?</a><p>Private funding by VC firms is down 50% YOY.</p></li>
+      </ul>
+    </aside>
+
+    <section class="featured-articles">
+      <article>
+        <img src="C:\Users\Parasat\Desktop\CLSWRC\assets\images\image-retro-pcs.jpg" alt="Reviving Retro PCs">
+        <h3>01 Reviving Retro PCs</h3>
+        <p>What happens when old PCs are given modern upgrades?</p>
+      </article>
+      <article>
+        <img src="C:\Users\Parasat\Desktop\CLSWRC\assets\images\image-top-laptops.jpg" alt="Top 10 Laptops of 2022">
+        <h3>02 Top 10 Laptops of 2022</h3>
+        <p>Our best picks for various needs and budgets.</p>
+      </article>
+      <article>
+        <img src="C:\Users\Parasat\Desktop\CLSWRC\assets\images\image-gaming-growth.jpg" alt="The Growth of Gaming">
+        <h3>03 The Growth of Gaming</h3>
+        <p>How the pandemic has sparked fresh opportunities.</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
